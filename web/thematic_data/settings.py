@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portal',
+    'portal.apps.PortalConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'thematic_data.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,8 +119,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -130,4 +132,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ BASE_DIR / 'static']
+
+# redirect admin logout back to portal
+LOGOUT_REDIRECT_URL = '/'
+# optional: redirect after login as well
+LOGIN_REDIRECT_URL = '/admin/'
 

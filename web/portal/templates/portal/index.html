@@ -1,29 +1,33 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load static i18n %}
 {% block title %}{% trans "National Resource Management Data Portal" %}{% endblock %}
 {% block content %}
   <div id="mainCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'img/slide1.png' %}" class="d-block w-100" alt="">
+      {% for img in carousel %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <img src="{{ img.image.url }}" class="d-block w-100" alt="{{ img.caption }}">
+        {% if img.caption %}
+        <div class="carousel-caption d-none d-md-block">
+          <p>{{ img.caption }}</p>
+        </div>
+        {% endif %}
       </div>
-      <!-- add more slides here -->
+      {% endfor %}
     </div>
-    <button class="carousel-control-prev" data-bs-target="#mainCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" data-bs-target="#mainCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+    <button class="carousel-control-prev" …></button>
+    <button class="carousel-control-next" …></button>
   </div>
 
   <div class="row row-cols-1 row-cols-md-2 g-4">
-    {% for app in apps %}
+    {% for card in cards %}
     <div class="col">
-      <div class="card h-100">
+      <div class="card h-100" style="background: {{ cfg.card_color }}; color: {{ cfg.body_text_color }};">
         <div class="card-body">
-          <h5 class="card-title">{{ app.title }}</h5>
-          <p class="card-text">{{ app.desc }}</p>
-          <a href="{{ app.url }}" class="btn btn-primary">{% trans "Go to" %} {{ app.title }}</a>
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.description }}</p>
+          <a href="{{ card.url }}" class="btn btn-primary">{{ _('Continue') }}</a>
         </div>
       </div>
     </div>
