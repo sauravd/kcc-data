@@ -1,0 +1,37 @@
+/* site.css */
+
+/* 2: Fixed-height carousel, cropping images to fit */
+.carousel-item img {
+    width: 100%;
+    height: 300px;      /* adjust as you like */
+    object-fit: cover;  /* maintain aspect ratio, center-crop */
+  }
+  
+  /* ensure cards don’t push page taller than one screen */
+  .row-cols-md-2 .card {
+    min-height: 200px;  /* adjust so you can see all cards without scrolling */
+  }
+
+  /* Bold header title is handled inline above, but you can refine: */
+.navbar-brand {
+    font-weight: 700 !important;
+  }
+  
+  /* Ensure the language select and login link align nicely */
+  .navbar-nav .form-select-sm {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+/* About page styling */
+.about-content {
+  color: #000 !important;        /* force black text */
+  font-size: 1.125rem;           /* ~18px; increase as desired */
+  line-height: 1.6;              /* improve readability */
+  margin-top: 2rem;              /* space from navbar/carousel */
+}
+
+/* If you want extra gap between paragraphs: */
+.about-content p + p {
+  margin-top: 1rem;
+}

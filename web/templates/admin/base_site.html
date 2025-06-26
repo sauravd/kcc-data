@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ site_title }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+  <a href="{% url 'portal:index' %}">{{ site_header }}</a>
+</h1>
+{% endblock %}
+
+{% block userlinks %}
+  {% if user.is_active and user.is_staff %}
+    {% blocktrans with username=user.get_username %}
+      Welcome, {{ username }}
+    {% endblocktrans %}.
+    <a href="{% url 'admin:password_change' %}">{% trans "Change password" %}</a> /
+    <a href="{% url 'portal:logout' %}">{% trans "Log out" %}</a>
+  {% endif %}
+{% endblock %}

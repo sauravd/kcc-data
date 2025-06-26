@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-25 09:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+#: portal/models.py:6
+msgid "Favicon"
+msgstr "أيقونة مفضلة"
+
+#: portal/models.py:6
+msgid "Upload a 16x16 or 32x32 .ico or .png favicon"
+msgstr "قم بتحميل أيقونة مفضلة بحجم 16×16 أو 32×32 بصيغة .ico أو .png"
+
+#: portal/models.py:7
+msgid "Logo"
+msgstr "الشعار"
+
+#: portal/models.py:7
+msgid "Upload a square or landscape logo (e.g. 100x100px or 200x50px)"
+msgstr "قم بتحميل شعار مربع أو أفقي (على سبيل المثال 100 × 100 بكسل أو 200 × 50 بكسل)"
+
+#: portal/models.py:8
+msgid "Site title"
+msgstr "عنوان الموقع"
+
+#: portal/models.py:9
+msgid "Header color"
+msgstr "لون الرأس"
+
+#: portal/models.py:10
+msgid "Header text color"
+msgstr ""
+
+#: portal/models.py:11
+msgid "Login link color"
+msgstr ""
+
+#: portal/models.py:12
+msgid "Footer color"
+msgstr ""
+
+#: portal/models.py:13
+msgid "Footer text color"
+msgstr ""
+
+#: portal/models.py:14
+msgid "Card background"
+msgstr ""
+
+#: portal/models.py:15
+msgid "Body background"
+msgstr ""
+
+#: portal/models.py:16
+msgid "Body text color"
+msgstr ""
+
+#: portal/models.py:17
+msgid "Organization name"
+msgstr ""
+
+#: portal/models.py:18
+msgid "Copyright year"
+msgstr ""
+
+#: portal/models.py:21
+msgid "Portal setting"
+msgstr ""
+
+#: portal/models.py:22
+msgid "Portal settings"
+msgstr ""
+
+#: portal/models.py:30
+msgid "Image"
+msgstr ""
+
+#: portal/models.py:31
+msgid "Caption"
+msgstr ""
+
+#: portal/models.py:32 portal/models.py:45
+msgid "Order"
+msgstr ""
+
+#: portal/models.py:36
+msgid "Carousel image"
+msgstr ""
+
+#: portal/models.py:37
+msgid "Carousel images"
+msgstr ""
+
+#: portal/models.py:42
+msgid "Card title"
+msgstr ""
+
+#: portal/models.py:43
+msgid "Description"
+msgstr ""
+
+#: portal/models.py:44
+msgid "Link URL"
+msgstr ""
+
+#: portal/models.py:49
+msgid "Portal card"
+msgstr ""
+
+#: portal/models.py:50
+msgid "Portal cards"
+msgstr ""
+
+#: portal/models.py:55
+msgid "About content"
+msgstr ""
+
+#: portal/models.py:56
+msgid "HTML or plain text for the About page"
+msgstr ""
+
+#: portal/models.py:60
+msgid "About page"
+msgstr "حول الصفحة"
+
+#: portal/models.py:61
+msgid "About pages"
+msgstr "حول الصفحة"
+
+#: portal/models.py:64
+msgid "About Page"
+msgstr "حول الصفحة"
+
+#: portal/templates/base.html:45 portal/templates/portal/about.html:4
+msgid "About"
+msgstr "عن"
+
+#: portal/templates/base.html:72
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: portal/templates/base.html:80
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: portal/templates/portal/index.html:4
+msgid "National Resource Management Data Portal"
+msgstr "بوابة بيانات إدارة الموارد الوطنية"
+
+#: portal/templates/portal/index.html:30
+msgid "Continue"
+msgstr "يكمل"

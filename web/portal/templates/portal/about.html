@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{% trans "About" %} – {{ cfg.site_title }}{% endblock %}
+
+{% block content %}
+  <div class="about-content py-4">
+    {{ about.content|linebreaks }}
+  </div>
+{% endblock %}
