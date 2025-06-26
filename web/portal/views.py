@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import PortalSetting, CarouselImage, PortalCard, AboutPage
+from django.contrib.auth import logout
 
 def index(request):
     cfg, _ = PortalSetting.objects.get_or_create(
@@ -22,3 +23,9 @@ def about(request):
         'about': about_page,
     }
     return render(request, 'portal/about.html', context)
+
+
+def site_logout(request):
+    logout(request)
+    return redirect('portal:index')
+
