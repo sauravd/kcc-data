@@ -21,7 +21,7 @@
   <nav class="navbar navbar-expand-md" style="background: {{ cfg.header_color }};">
     <div class="container">
       <!-- Brand: logo + title -->
-      <a class="navbar-brand d-flex align-items-center" href="{% url 'portal:index' %}">
+      <a class="navbar-brand d-flex align-items-center" href="{% url 'portal_thematic:index' %}">
         {% if cfg.logo %}
           <img src="{{ cfg.logo.url }}" alt="{{ cfg.site_title }}" style="height:40px;">
         {% endif %}
@@ -41,21 +41,28 @@
       <!-- Collapsible content -->
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto align-items-center">
-          <!-- Home -->
+          <!--Main -->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'portal:index' %}"
+               style="color: {{ cfg.login_text_color }};">
+              {% trans "Main" %}
+            </a>
+          </li>
+          <!--Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'portal_thematic:index' %}"
                style="color: {{ cfg.login_text_color }};">
               {% trans "Home" %}
             </a>
           </li>
-
           <!-- About -->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'portal:about' %}"
+            <a class="nav-link" href="{% url 'portal_thematic:about' %}"
                style="color: {{ cfg.login_text_color }};">
               {% trans "About" %}
             </a>
           </li>
+          
 
           <!-- Language selector -->
           <li class="nav-item">
@@ -79,7 +86,7 @@
               </span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'portal:logout' %}"
+              <a class="nav-link" href="{% url 'portal_thematic:logout' %}"
                  style="color: {{ cfg.login_text_color }};">
                 {% trans "Logout" %}
               </a>

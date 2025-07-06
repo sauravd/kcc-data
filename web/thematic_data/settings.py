@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portal.apps.PortalConfig',
     'modeltranslation',
+    'portal_thematic.apps.Portal_thematicConfig', 
 ]
 
 MIDDLEWARE = [

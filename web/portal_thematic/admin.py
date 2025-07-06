@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import PortalSetting, CarouselImage, PortalCard, AboutPage
+from .models import PortalThematicSetting, CarouselImage, PortalCard, AboutPage
 
 
-# Fetch the one PortalSetting (if it exists)
+# Fetch the one PortalThematicSetting (if it exists)
 try:
-    cfg = PortalSetting.objects.first()
+    cfg = PortalThematicSetting.objects.first()
     admin_title = cfg.site_title
 except Exception:
     admin_title = "Portal Administration"
@@ -14,10 +14,10 @@ admin.site.site_header = admin_title
 admin.site.site_title = admin_title
 admin.site.index_title = admin_title
 
-@admin.register(PortalSetting)
-class PortalSettingAdmin(admin.ModelAdmin):
+@admin.register(PortalThematicSetting)
+class PortalThematicSettingAdmin(admin.ModelAdmin):
     fieldsets = [
-      (None, {'fields': ['logo','favicon','site_title','organization','copyright_year']}),
+      (None, {'fields': ['logo','favicon','site_title','organization','copyright_year','home_label', 'main_label']}),
       ('Colors', {'fields': ['header_color','footer_color','card_color','body_bg_color','body_text_color']}),
     ]
 

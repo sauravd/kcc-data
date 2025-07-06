@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 09:18+0000\n"
+"POT-Creation-Date: 2025-07-03 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,150 +18,208 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-#: portal/models.py:6
+
+#: portal/models.py:6 portal_thematic/models.py:6
 msgid "Favicon"
 msgstr "أيقونة مفضلة"
 
-#: portal/models.py:6
+#: portal/models.py:6 portal_thematic/models.py:6
 msgid "Upload a 16x16 or 32x32 .ico or .png favicon"
 msgstr "قم بتحميل أيقونة مفضلة بحجم 16×16 أو 32×32 بصيغة .ico أو .png"
 
-#: portal/models.py:7
+#: portal/models.py:7 portal_thematic/models.py:7
 msgid "Logo"
 msgstr "الشعار"
 
-#: portal/models.py:7
+#: portal/models.py:7 portal_thematic/models.py:7
 msgid "Upload a square or landscape logo (e.g. 100x100px or 200x50px)"
-msgstr "قم بتحميل شعار مربع أو أفقي (على سبيل المثال 100 × 100 بكسل أو 200 × 50 بكسل)"
+msgstr ""
+"قم بتحميل شعار مربع أو أفقي (على سبيل المثال 100 × 100 بكسل أو 200 × 50 بكسل)"
 
-#: portal/models.py:8
+#: portal/models.py:8 portal_thematic/models.py:8
 msgid "Site title"
 msgstr "عنوان الموقع"
 
-#: portal/models.py:9
+#: portal/models.py:9 portal_thematic/models.py:9
 msgid "Header color"
 msgstr "لون الرأس"
 
-#: portal/models.py:10
+#: portal/models.py:10 portal_thematic/models.py:10
 msgid "Header text color"
 msgstr ""
 
-#: portal/models.py:11
+#: portal/models.py:11 portal_thematic/models.py:12
+msgid "Home link text"
+msgstr ""
+
+#: portal/models.py:11 portal_thematic/models.py:12
+#: portal_thematic/templates/base.html:54
+msgid "Home"
+msgstr "بيت"
+
+#: portal/models.py:11 portal_thematic/models.py:12
+msgid "Label for the Home nav link"
+msgstr ""
+
+#: portal/models.py:12 portal_thematic/models.py:11
 msgid "Login link color"
 msgstr ""
 
-#: portal/models.py:12
+#: portal/models.py:13 portal_thematic/models.py:14
 msgid "Footer color"
 msgstr ""
 
-#: portal/models.py:13
+#: portal/models.py:14 portal_thematic/models.py:15
 msgid "Footer text color"
 msgstr ""
 
-#: portal/models.py:14
+#: portal/models.py:15 portal_thematic/models.py:16
 msgid "Card background"
 msgstr ""
 
-#: portal/models.py:15
+#: portal/models.py:16 portal_thematic/models.py:17
 msgid "Body background"
 msgstr ""
 
-#: portal/models.py:16
+#: portal/models.py:17 portal_thematic/models.py:18
 msgid "Body text color"
 msgstr ""
 
-#: portal/models.py:17
+#: portal/models.py:18 portal_thematic/models.py:19
 msgid "Organization name"
 msgstr ""
 
-#: portal/models.py:18
+#: portal/models.py:19 portal_thematic/models.py:20
 msgid "Copyright year"
 msgstr ""
 
-#: portal/models.py:21
+#: portal/models.py:22 portal_thematic/models.py:23
 msgid "Portal setting"
 msgstr ""
 
-#: portal/models.py:22
+#: portal/models.py:23 portal_thematic/models.py:24
 msgid "Portal settings"
 msgstr ""
 
-#: portal/models.py:30
+#: portal/models.py:31 portal_thematic/models.py:32
 msgid "Image"
 msgstr ""
 
-#: portal/models.py:31
+#: portal/models.py:32 portal_thematic/models.py:33
 msgid "Caption"
 msgstr ""
 
-#: portal/models.py:32 portal/models.py:45
+#: portal/models.py:33 portal/models.py:46 portal_thematic/models.py:34
+#: portal_thematic/models.py:47
 msgid "Order"
 msgstr ""
 
-#: portal/models.py:36
+#: portal/models.py:37 portal_thematic/models.py:38
 msgid "Carousel image"
 msgstr ""
 
-#: portal/models.py:37
+#: portal/models.py:38 portal_thematic/models.py:39
 msgid "Carousel images"
 msgstr ""
 
-#: portal/models.py:42
+#: portal/models.py:43 portal_thematic/models.py:44
 msgid "Card title"
 msgstr ""
 
-#: portal/models.py:43
+#: portal/models.py:44 portal_thematic/models.py:45
 msgid "Description"
 msgstr ""
 
-#: portal/models.py:44
+#: portal/models.py:45 portal_thematic/models.py:46
 msgid "Link URL"
 msgstr ""
 
-#: portal/models.py:49
+#: portal/models.py:50 portal_thematic/models.py:51
 msgid "Portal card"
 msgstr ""
 
-#: portal/models.py:50
+#: portal/models.py:51 portal_thematic/models.py:52
 msgid "Portal cards"
 msgstr ""
 
-#: portal/models.py:55
+#: portal/models.py:56 portal_thematic/models.py:57
 msgid "About content"
 msgstr ""
 
-#: portal/models.py:56
+#: portal/models.py:57 portal_thematic/models.py:58
 msgid "HTML or plain text for the About page"
 msgstr ""
 
-#: portal/models.py:60
+#: portal/models.py:61 portal_thematic/models.py:62
 msgid "About page"
 msgstr "حول الصفحة"
 
-#: portal/models.py:61
+#: portal/models.py:62 portal_thematic/models.py:63
 msgid "About pages"
 msgstr "حول الصفحة"
 
-#: portal/models.py:64
+#: portal/models.py:65 portal_thematic/models.py:66
 msgid "About Page"
 msgstr "حول الصفحة"
 
-#: portal/templates/base.html:45 portal/templates/portal/about.html:4
+#: portal/templates/admin/base_site.html:16
+#: portal_thematic/templates/admin/base_site.html:16
+#: templates/admin/base_site.html:14
+#, python-format
+msgid ""
+"\n"
+"      Welcome, %(username)s\n"
+"    "
+msgstr ""
+
+#: portal/templates/admin/base_site.html:19
+#: portal_thematic/templates/admin/base_site.html:19
+#: templates/admin/base_site.html:17
+msgid "Change password"
+msgstr ""
+
+#: portal/templates/admin/base_site.html:20
+#: portal_thematic/templates/admin/base_site.html:20
+#: templates/admin/base_site.html:18
+msgid "Log out"
+msgstr ""
+
+#: portal/templates/base.html:37 portal_thematic/templates/base.html:37
+msgid "Toggle navigation"
+msgstr ""
+
+#: portal/templates/base.html:48 portal/templates/portal/about.html:4
+#: portal_thematic/templates/base.html:48
+#: portal_thematic/templates/portal_thematic/about.html:4
 msgid "About"
 msgstr "عن"
 
-#: portal/templates/base.html:72
+#: portal/templates/base.html:76 portal_thematic/templates/base.html:82
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-#: portal/templates/base.html:80
+#: portal/templates/base.html:83 portal_thematic/templates/base.html:89
 msgid "Login"
 msgstr "تسجيل الدخول"
 
 #: portal/templates/portal/index.html:4
+#: portal_thematic/templates/portal_thematic/index.html:4
 msgid "National Resource Management Data Portal"
 msgstr "بوابة بيانات إدارة الموارد الوطنية"
 
 #: portal/templates/portal/index.html:30
+#: portal_thematic/templates/portal_thematic/index.html:30
 msgid "Continue"
 msgstr "يكمل"
+
+#: portal_thematic/models.py:13
+msgid "Main site link text"
+msgstr ""
+
+#: portal_thematic/models.py:13
+msgid "Main"
+msgstr "رئيسي"
+
+#: portal_thematic/models.py:13
+msgid "Label for the Main-site nav link (back to the central portal)"
+msgstr ""
