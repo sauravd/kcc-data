@@ -22,7 +22,7 @@ jobs:
 
       # 3) Set up SSH:
       - name: Install SSH key
-        uses: webfactory/ssh-agent@v0.8.1
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: "${{ secrets.DEPLOY_SSH_KEY }}"
 
