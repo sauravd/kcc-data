@@ -17,7 +17,7 @@ admin.site.index_title = admin_title
 @admin.register(PortalSetting)
 class PortalSettingAdmin(admin.ModelAdmin):
     fieldsets = [
-      (None, {'fields': ['logo','favicon','site_title','organization','copyright_year']}),
+      (None, {'fields': ['logo','favicon','site_title','organization','copyright_year','home_label']}),
       ('Colors', {'fields': ['header_color','footer_color','card_color','body_bg_color','body_text_color']}),
     ]
 

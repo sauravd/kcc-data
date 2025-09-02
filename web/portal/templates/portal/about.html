@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-{% load i18n static %}
-
-{% block title %}{% trans "About" %} – {{ cfg.site_title }}{% endblock %}
+{% load i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
 
 {% block content %}
-  <div class="about-content py-4">
-    {{ about.content|linebreaks }}
+  <div class="container mt-4">
+    <div class="about-content {% if LANGUAGE_BIDI %}rtl{% endif %}">
+      {{ about.content|safe }}
+    </div>
   </div>
 {% endblock %}

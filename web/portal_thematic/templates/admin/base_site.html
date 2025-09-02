@@ -4,19 +4,23 @@
 {% block title %}{{ site_title }}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">
-  <a href="{% url 'portal_thematic:index' %}">
-    {{ site_header }}
-  </a>
-</h1>
+  <h1 id="site-name" style="display:flex;align-items:center;justify-content:space-between;">
+    <a href="{% url 'portal:index' %}">{{ site_header }}</a>
+    <a href="{% url 'portal:index' %}" class="button" style="margin-left:1rem;">
+      {% trans "Back to Home" %}
+    </a>
+  </h1>
 {% endblock %}
 
 {% block userlinks %}
   {% if user.is_active and user.is_staff %}
-    {% blocktrans with username=user.get_username %}
-      Welcome, {{ username }}
-    {% endblocktrans %}.
+    {% blocktrans with username=user.get_username %}Welcome, {{ username }}{% endblocktrans %}.
     <a href="{% url 'admin:password_change' %}">{% trans "Change password" %}</a> /
-    <a href="{% url 'admin:logout' %}">{% trans "Log out" %}</a>
+    <form action="{% url 'portal:logout' %}" method="post" style="display:inline;">
+      {% csrf_token %}
+      <button type="submit" class="button" style="background:none;border:none;padding:0;cursor:pointer;">
+        {% trans "Log out" %}
+      </button>
+    </form>
   {% endif %}
 {% endblock %}

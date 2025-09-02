@@ -1,0 +1,35 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div id="content" class="colM">
+  {% if form.errors and not form.non_field_errors %}
+    <p class="errornote">{% blocktrans %}Please correct the error below.{% endblocktrans %}</p>
+  {% endif %}
+  {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+      <p class="errornote">{{ error }}</p>
+    {% endfor %}
+  {% endif %}
+
+  <div class="module aligned">
+    <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+      <div class="form-row">
+        {{ form.username.errors }}
+        <label for="id_username">{% trans 'Username' %}:</label> {{ form.username }}
+      </div>
+      <div class="form-row">
+        {{ form.password.errors }}
+        <label for="id_password">{% trans 'Password' %}:</label> {{ form.password }}
+        <input type="hidden" name="next" value="{{ next }}">
+      </div>
+      <div class="submit-row">
+        <input type="submit" value="{% trans 'Log in' %}">
+        <a class="button" href="{% url 'portal:index' %}" style="margin-inline-start: .5rem;">
+          {% trans "Back to Home" %}
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

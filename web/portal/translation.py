@@ -21,4 +21,3 @@ class PortalSettingTranslation(TranslationOptions):
         # 'logout_text',
     )
 
-    

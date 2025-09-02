@@ -42,13 +42,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'portal.apps.PortalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portal.apps.PortalConfig',
     'modeltranslation',
     'portal_thematic.apps.Portal_thematicConfig', 
 ]
@@ -144,10 +144,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # This is added, not part of default settings:
 TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [ BASE_DIR / 'static']
+STATICFILES_DIRS = [ BASE_DIR / 'portal' / 'static']
+# This is the folder inside the container (and on your host) you mounted:
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# redirect admin logout back to portal
+
+# Where to redirect when someone needs to log in
+LOGIN_URL = 'portal:login'
+
+# After a successful login, send them here
+LOGIN_REDIRECT_URL = 'portal:index'
+
+# After logout, send them back home
 LOGOUT_REDIRECT_URL = '/'
-# optional: redirect after login as well
-LOGIN_REDIRECT_URL = '/admin/'
+
 
