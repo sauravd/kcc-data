@@ -5,3 +5,19 @@ __pycache__/
 build/
 *.sqlite3
 media/
+
+# === Django build artifacts ===
+web/staticfiles/
+**/__pycache__/
+*.pyc
+
+# compiled translations (keep only .po in git)
+*.mo
+
+# local envs
+.env
+.env.*
+!.env.example
+
+# media uploads (if you ever add)
+web/media/
