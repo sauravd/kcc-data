@@ -27,6 +27,10 @@ MODELTRANSLATION_TRANSLATION_FILES = (
 )
 
 
+def csv_env(name, default=""):
+    raw = os.environ.get(name, default)
+    return [x.strip() for x in raw.split(",") if x.strip()]
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -36,8 +40,17 @@ SECRET_KEY = 'django-insecure-v)e!@dop75ukf#*!owkl^azvp^8lukba^18bbyhy+i8cvdx%a3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['faoncvc.info', 'www.faoncvc.info','localhost']
+ALLOWED_HOSTS = csv_env("ALLOWED_HOSTS") or ["localhost", "127.0.0.1", "faoncvc.info", "https://faoncvc.info", "www.faoncvc.info"]
 
+# CSRF trusted origins (MUST include scheme in Django 4+)
+CSRF_TRUSTED_ORIGINS = csv_env("CSRF_TRUSTED_ORIGINS")
+
+# Behind a reverse proxy (Nginx) that terminates TLS:
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+# (Optional but recommended in production)
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
