@@ -1,37 +1,61 @@
-/* site.css */
+/* ---------- Base direction toggles ---------- */
+body.rtl { direction: rtl; text-align: right; }
+body.ltr { direction: ltr; text-align: left; }
 
-/* 2: Fixed-height carousel, cropping images to fit */
+/* ---------- Navbar tweaks ---------- */
+/* Make brand title bold (kept from your version) */
+.navbar-brand { font-weight: 700 !important; }
+
+/* Brand text spacing next to the logo */
+body.ltr .navbar-brand span { margin-left: .5rem; margin-right: 0; }
+body.rtl .navbar-brand span { margin-right: .5rem; margin-left: 0; }
+
+/* Keep toggler visible on colored headers */
+.navbar-toggler { border-color: rgba(0,0,0,.1); }
+.navbar-toggler-icon { background-image: var(--bs-navbar-toggler-icon-bg); }
+
+/* ---------- Carousel (fixed height, responsive) ---------- */
 .carousel-item img {
-    width: 100%;
-    height: 300px;      /* adjust as you like */
-    object-fit: cover;  /* maintain aspect ratio, center-crop */
-  }
-  
-  /* ensure cards don’t push page taller than one screen */
-  .row-cols-md-2 .card {
-    min-height: 200px;  /* adjust so you can see all cards without scrolling */
-  }
+  width: 100%;
+  height: 360px;            /* adjust to taste */
+  object-fit: cover;        /* center-crop */
+}
+@media (max-width: 992px) { .carousel-item img { height: 300px; } }
+@media (max-width: 576px) { .carousel-item img { height: 220px; } }
 
-  /* Bold header title is handled inline above, but you can refine: */
-.navbar-brand {
-    font-weight: 700 !important;
-  }
-  
-  /* Ensure the language select and login link align nicely */
-  .navbar-nav .form-select-sm {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
+/* ---------- Cards: equal heights + neat button alignment ---------- */
+.card { height: 100%; }
+.card .card-body { display: flex; flex-direction: column; }
+.card .card-title { font-weight: 600; }
+.card .card-text { flex: 1 1 auto; }
+.card .btn { align-self: flex-start; } /* start = right in RTL */
+.card-footer { text-align: start; }    /* start = right in RTL */
 
-/* About page styling */
+/* If you use a grid like row row-cols-md-2, keep cards from collapsing */
+.row-cols-md-2 .card { min-height: 200px; }
+
+/* ---------- About page ---------- */
 .about-content {
-  color: #000 !important;        /* force black text */
-  font-size: 1.125rem;           /* ~18px; increase as desired */
-  line-height: 1.6;              /* improve readability */
-  margin-top: 2rem;              /* space from navbar/carousel */
+  color: #000;              /* force black */
+  font-size: 1.125rem;      /* ~18px */
+  line-height: 1.7;
+  margin-top: 2rem;         /* space from navbar/carousel */
 }
+.about-content p + p { margin-top: 1rem; }
 
-/* If you want extra gap between paragraphs: */
-.about-content p + p {
-  margin-top: 1rem;
+/* ---------- Language selector compact ---------- */
+.navbar-nav .form-select-sm {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  height: calc(1.5em + .5rem + 2px);
 }
+/* Keep dropdown readable even in RTL UIs */
+form select[dir="ltr"] { direction: ltr; }
+
+/* ---------- Footer ---------- */
+footer { margin-top: auto; } /* body has min-vh-100 already */
+
+/* ---------- Misc helpers ---------- */
+.page-container { padding-inline: 1rem; }
+body.rtl .text-start { text-align: right !important; }
+body.rtl .text-end   { text-align: left !important; }

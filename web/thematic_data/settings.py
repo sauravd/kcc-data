@@ -42,6 +42,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'portal.apps.PortalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'modeltranslation',
     'portal_thematic.apps.Portal_thematicConfig', 
 ]
 
@@ -122,6 +122,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+    ("en", "English"),
+    ("ar", "العربية"),
+]
+
+MODELTRANSLATION_LANGUAGES = ("en", "ar")
+MODELTRANSLATION_DEFAULT_LANGUAGE = "en"
+MODELTRANSLATION_FALLBACK_LANGUAGES = ("en",)
+
 
 TIME_ZONE = 'UTC'
 

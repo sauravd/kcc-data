@@ -1,23 +1,15 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import PortalCard, AboutPage, PortalSetting
-
-@register(PortalCard)
-class PortalCardTranslation(TranslationOptions):
-    fields = ('title', 'description',)
-
-@register(AboutPage)
-class AboutPageTranslation(TranslationOptions):
-    fields = ('content',)
-
+from .models import PortalSetting, PortalCard, AboutPage
 
 @register(PortalSetting)
-class PortalSettingTranslation(TranslationOptions):
-    fields = (
-        'site_title',
-        'organization',
-        'home_label',
-        # If you’d also like your login/logout link text or captions translatable:
-        # 'login_text',
-        # 'logout_text',
-    )
+class PortalSettingTR(TranslationOptions):
+    # Add site_title (and organization if you want it translatable too)
+    fields = ("site_title", "organization",)
 
+@register(PortalCard)
+class PortalCardTR(TranslationOptions):
+    fields = ("title", "description",)
+
+@register(AboutPage)
+class AboutPageTR(TranslationOptions):
+    fields = ("content",)

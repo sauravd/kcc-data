@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 08:31+0000\n"
+"POT-Creation-Date: 2025-09-03 07:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,8 +52,8 @@ msgstr ""
 msgid "Home link text"
 msgstr ""
 
-#: portal/models.py:11 portal/templates/base.html:54
-#: portal_thematic/models.py:12 portal_thematic/templates/base.html:55
+#: portal/models.py:11 portal/templates/base.html:60
+#: portal_thematic/models.py:12 portal_thematic/templates/base.html:66
 msgid "Home"
 msgstr "بيت"
 
@@ -162,21 +162,20 @@ msgstr "حول الصفحة"
 msgid "About Page"
 msgstr "حول الصفحة"
 
-#: portal/templates/base.html:43 portal_thematic/templates/base.html:37
+#: portal/templates/base.html:50 portal_thematic/templates/base.html:48
 msgid "Toggle navigation"
 msgstr ""
 
-#: portal/templates/base.html:62 portal/templates/portal/about.html:4
-#: portal_thematic/templates/base.html:62
+#: portal/templates/base.html:66 portal_thematic/templates/base.html:73
 #: portal_thematic/templates/portal_thematic/about.html:4
 msgid "About"
 msgstr "عن"
 
-#: portal/templates/base.html:91 portal_thematic/templates/base.html:91
+#: portal/templates/base.html:94 portal_thematic/templates/base.html:103
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-#: portal/templates/base.html:98 portal_thematic/templates/base.html:98
+#: portal/templates/base.html:101 portal_thematic/templates/base.html:111
 msgid "Login"
 msgstr "تسجيل الدخول"
 
@@ -186,32 +185,27 @@ msgid "National Resource Management Data Portal"
 msgstr "بوابة بيانات إدارة الموارد الوطنية"
 
 #: portal/templates/portal/index.html:30
-#: portal_thematic/templates/portal_thematic/index.html:30
 msgid "Continue"
 msgstr "يكمل"
 
-#: portal/templates/portal/login.html:4 portal/templates/portal/login.html:8
-#: portal/templates/portal/login.html:22
-#: portal_thematic/templates/admin/login.html:6
-#: portal_thematic/templates/admin/login.html:20
-msgid "Log in"
-msgstr "تسجيل الدخول"
-
-#: portal/templates/portal/login.html:10
-#: portal_thematic/templates/admin/login.html:8
+#: portal/templates/portal/login.html:7
 msgid "Please correct the error below."
 msgstr ""
 
-#: portal/templates/portal/login.html:15
+#: portal/templates/portal/login.html:19
 msgid "Username"
 msgstr "اسم المستخدم"
 
-#: portal/templates/portal/login.html:19
+#: portal/templates/portal/login.html:23
 msgid "Password"
 msgstr "كلمة المرور"
 
-#: portal/templates/portal/login.html:23
-#: portal_thematic/templates/admin/login.html:23
+#: portal/templates/portal/login.html:27
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+#: portal/templates/portal/login.html:29
+#: portal_thematic/templates/admin/base_site.html:10
 msgid "Back to Home"
 msgstr "العودة إلى المنزل"
 
@@ -219,7 +213,7 @@ msgstr "العودة إلى المنزل"
 msgid "Main site link text"
 msgstr ""
 
-#: portal_thematic/models.py:13 portal_thematic/templates/base.html:48
+#: portal_thematic/models.py:13 portal_thematic/templates/base.html:59
 msgid "Main"
 msgstr "رئيسي"
 
@@ -227,7 +221,21 @@ msgstr "رئيسي"
 msgid "Label for the Main-site nav link (back to the central portal)"
 msgstr ""
 
-#: portal_thematic/templates/admin/base_site.html:16
+#: portal_thematic/templates/admin/base_site.html:17
+#, python-format
+msgid "Welcome, %(username)s"
+msgstr "مرحباً"
+
+#: portal_thematic/templates/admin/base_site.html:18
+#: templates/admin/base_site.html:17
+msgid "Change password"
+msgstr "تغيير كلمة المرور"
+
+#: portal_thematic/templates/admin/base_site.html:22
+#: templates/admin/base_site.html:18
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
 #: templates/admin/base_site.html:14
 #, python-format
 msgid ""
@@ -235,13 +243,3 @@ msgid ""
 "      Welcome, %(username)s\n"
 "    "
 msgstr ""
-
-#: portal_thematic/templates/admin/base_site.html:19
-#: templates/admin/base_site.html:17
-msgid "Change password"
-msgstr "تغيير كلمة المرور"
-
-#: portal_thematic/templates/admin/base_site.html:20
-#: templates/admin/base_site.html:18
-msgid "Log out"
-msgstr "تسجيل الخروج"
